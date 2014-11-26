@@ -142,7 +142,7 @@ return
 #+!s::
 	ifwinnotexist svnserve.exe
 	{
-		run svnserve -d -r E:\SVN_Projects , , min
+		run svnserve -d -r E:\Repositories , , min
 	}
 	else
 	{

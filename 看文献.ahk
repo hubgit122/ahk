@@ -5,15 +5,22 @@ SetTitleMatchMode, 2
 
 nowPage := 0
 interval := 60
+program := ""
 
 InputBox, nowPage , 输入当前页码
 InputBox, interval , 输入翻页秒数
+InputBox, program, 限制开启的程序
 
 thisInterval := interval
 settimer L1, 1000
 
 loop
 {
+    if %program%
+        IfWinNotActive , %program%
+            ifwinexist , %program%
+                winactivate %program%
+
 	finally:= 1
 	counter:= 0
 	page_ := nowPage
@@ -49,7 +56,7 @@ loop
 		nowPage := nowPage + 1
 		thisInterval := interval
 		showTip("还没看完么? 当前页为" . nowPage)
-		send {pgdn}
+		;send {pgdn}
 	}
 }
 return
