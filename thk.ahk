@@ -20,7 +20,7 @@ return
 	mouseclick,
 ^!#LButton::
 	Send, {CTRLDOWN}c{CTRLUP}
-	run E:\Tools\MDictPC\MDict.exe
+	run d:\Tools\MDictPC\MDict.exe
 	WinWait, MDict,
 	IfWinNotActive, MDict, , WinActivate, MDict,
 	WinWaitActive, MDict,
@@ -39,16 +39,16 @@ return
 
 ;分区, 网站和脚本
 #+c::run c:\
-#+d::run E:\
-#+e::run e:\
+#+d::run d:\
+#+e::run d:\
 #+f::run f:\
 #+i::run i:\
 #+k::run k:\
 #+j::run j:\
 #+t::run %a_scriptdir%\eyeRest.ahk
 #+u::run %a_scriptdir%\unplug.ahk
-#+a::run E:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe /foi %a_scriptdir%\Hotkeys.ahk
-#+^a::run E:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe /foi %a_scriptdir%\new.ahk
+#+a::run d:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe /foi %a_scriptdir%\Hotkeys.ahk
+#+^a::run d:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe /foi %a_scriptdir%\new.ahk
 #^+r::Reload
 #+r::run http://www.renren.com/331502645
 #+b::run http://www.baidu.com
@@ -65,32 +65,32 @@ return
 	clipboard=%dir%
 return
 #^c::
-	dir:="E:\Projects"
+	dir:="d:\Projects"
 	run %dir%
 	clipboard=%dir%
 return
 #^d::
-	dir:="E:\DownLoads"
+	dir:="d:\DownLoads"
 	run %dir%
 	clipboard=%dir%
 return
 #^b::
-	dir:="E:\工具软件、编程语言学习"
+	dir:="d:\工具软件、编程语言学习"
 	run %dir%
 	clipboard=%dir%
 return
 #^k::
-	dir:="E:\课程资料"
+	dir:="d:\课程资料"
 	run %dir%
 	clipboard=%dir%
 return
 #^j::
-	dir:="E:\计算机学习"
+	dir:="d:\计算机学习"
 	run %dir%
 	clipboard=%dir%
 return
 #^t::
-	dir:="E:\Tools"
+	dir:="d:\Tools"
 	run %dir%
 	clipboard=%dir%
 return
@@ -100,23 +100,23 @@ return
 	clipboard=%dir%
 return
 #^p::
-	dir:="E:\Program Files"
+	dir:="d:\Program Files"
 	run %dir%
 	clipboard=%dir%
 return
 #^+p::
-	dir:="E:\Program Files (x86)"
+	dir:="d:\Program Files (x86)"
 	run %dir%
 	clipboard=%dir%
 return
 #^a::
-	dir:="E:\Projects\android\gamest"
+	dir:="d:\Projects\android\gamest"
 	run %dir%
 	clipboard=%dir%
 return
 
 ;软件
-#!d::run E:\Tools\MDictPC\MDict.exe
+#!d::run d:\Tools\MDictPC\MDict.exe
 #!c::
 	StringGetPos, posB, clipboard, \ , 1
 	StringGetPos, posA, clipboard, :\
@@ -134,7 +134,7 @@ return
 
 printscreen::run %windir%\system32\SnippingTool.exe
 #!s::
-	run E:\Program Files\Siber Systems\GoodSync\GoodSync.exe
+	run d:\Program Files\Siber Systems\GoodSync\GoodSync.exe
 	winwaitactive GoodSync
 	mouseclick
 	send {f10}
@@ -142,28 +142,28 @@ return
 #+!s::
 	ifwinnotexist svnserve.exe
 	{
-		run svnserve -d -r E:\Repositories , , min
+		run svnserve -d -r d:\Repositories , , min
 	}
 	else
 	{
 		winclose svnserve.exe
 	}
 return
-#!x::run E:\Tools\PDF工具包（14合1）\PDF解密器.exe
-#!k::run E:\Program Files (x86)\Kmplayer Plus\KMPlayer.exe "f:\mp3\勃兰登堡协奏曲"
-#!w::run E:\Program Files (x86)\Wing IDE\bin\wing.exe
-#!+w::run E:\Program Files (x86)\Wing IDE\bin\wing.exe C:\Users\ssqstone\Desktop\临时代码生成.py
-#!o::run E:\Program Files (x86)\UltraISO\UltraISO.exe
-#!m::run E:\Program Files\Foxmail 7.1\Foxmail.exe
-#+!m::run E:\Program Files (x86)\AraxisMerge\Merge.exe
-#!u::run E:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe
-#!+u::run E:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe %clipboard%
-#!b::run E:\Program Files (x86)\硕鼠\commence.exe
-#!l::run E:\Tools\屏幕亮度.exe
-#!t::run E:\Program Files (x86)\TC7\tc.exe
-#!+t::run E:\Program Files (x86)\Thunder Network\Thunder\Program\Thunder.exe
-#!+f::run E:\Program Files (x86)\FlashFXP 4.1.4.1664  烈火破解版\FlashFXP.exe
-#!f::run E:\Program Files (x86)\Foxit Software\Foxit PhantomPDF\Foxit PhantomPDF.exe
+#!x::run d:\Tools\PDF工具包（14合1）\PDF解密器.exe
+#!k::run d:\Program Files (x86)\Kmplayer Plus\KMPlayer.exe "f:\mp3\勃兰登堡协奏曲"
+#!w::run d:\Program Files (x86)\Wing IDE\bin\wing.exe
+#!+w::run d:\Program Files (x86)\Wing IDE\bin\wing.exe C:\Users\ssqstone\Desktop\临时代码生成.py
+#!o::run d:\Program Files (x86)\UltraISO\UltraISO.exe
+#!m::run d:\Program Files\Foxmail 7.1\Foxmail.exe
+#+!m::run d:\Program Files (x86)\AraxisMerge\Merge.exe
+#!u::run d:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe
+#!+u::run d:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe %clipboard%
+#!b::run d:\Program Files (x86)\硕鼠\commence.exe
+#!l::run d:\Tools\屏幕亮度.exe
+#!t::run d:\Program Files (x86)\TC7\tc.exe
+#!+t::run d:\Program Files (x86)\Thunder Network\Thunder\Program\Thunder.exe
+#!+f::run d:\Program Files (x86)\FlashFXP 4.1.4.1664  烈火破解版\FlashFXP.exe
+#!f::run d:\Program Files (x86)\Foxit Software\Foxit PhantomPDF\Foxit PhantomPDF.exe
 #!p::
 	IfWinExist python.exe
 		WinActivate
@@ -192,7 +192,7 @@ return
 ::/sign::石守谦 中国科学院大学 2014级 直博生 计算机与控制学院 shishouqian14@mails.ucas.ac.cn
 
 ;方便功能
-^!#+q::run E:\Program Files (x86)\Tencent\QQ\Bin\QQ.exe
+^!#+q::run d:\Program Files (x86)\Tencent\QQ\Bin\QQ.exe
 ^!t::showTip(a_mm . "月" . a_dd . "日" . a_hour . "时" . a_min . "分")
 +f7::sendC(A_YYYY . "-" . A_MM . "-" . A_DD)
 

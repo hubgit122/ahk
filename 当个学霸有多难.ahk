@@ -35,7 +35,7 @@ wait:=0
 ;--------------------------------------------
 blockKeyBoard:=1
 shutDownScreen:=1
-menu,tray, icon, E:\Projects\ahk\eyeRest.ico
+menu,tray, icon, d:\Projects\ahk\eyeRest.ico
 ;menu,tray, nostandard
 menu,tray, add,% "workTimeLeft_sec: ", showTime
 ;********************************************
