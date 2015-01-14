@@ -150,20 +150,20 @@ return
 	}
 return
 #!x::run d:\Tools\PDF工具包（14合1）\PDF解密器.exe
-#!k::run d:\Program Files (x86)\Kmplayer Plus\KMPlayer.exe "f:\mp3\勃兰登堡协奏曲"
-#!w::run d:\Program Files (x86)\Wing IDE\bin\wing.exe
-#!+w::run d:\Program Files (x86)\Wing IDE\bin\wing.exe C:\Users\ssqstone\Desktop\临时代码生成.py
+#!k::run D:\Program Files (x86)\Kmplayer Plus\KMPlayerPortable.exe "d:\mp3\勃兰登堡协奏曲"
+#!w::run D:\Program Files (x86)\Wing IDE 5.0.9\bin\wing.exe
+#!+w::run D:\Program Files (x86)\Wing IDE 5.0.9\bin\wing.exe C:\Users\ssqstone\Desktop\临时代码生成.py
 #!o::run d:\Program Files (x86)\UltraISO\UltraISO.exe
 #!m::run d:\Program Files\Foxmail 7.1\Foxmail.exe
-#+!m::run d:\Program Files (x86)\AraxisMerge\Merge.exe
+#+!m::run D:\Program Files\Araxis\Araxis Merge\Merge.exe
 #!u::run d:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe
 #!+u::run d:\Program Files (x86)\IDM Computer Solutions\UltraEdit\Uedit32.exe %clipboard%
 #!b::run d:\Program Files (x86)\硕鼠\commence.exe
 #!l::run d:\Tools\屏幕亮度.exe
 #!t::run d:\Program Files (x86)\TC7\tc.exe
-#!+t::run d:\Program Files (x86)\Thunder Network\Thunder\Program\Thunder.exe
+#!+t::run D:\Program Files (x86)\真正高速通道破解版迅雷\Thunder.exe
 #!+f::run d:\Program Files (x86)\FlashFXP 4.1.4.1664  烈火破解版\FlashFXP.exe
-#!f::run d:\Program Files (x86)\Foxit Software\Foxit PhantomPDF\Foxit PhantomPDF.exe
+#!f::run D:\Program Files (x86)\Foxit Software\Foxit PhantomPDF\FoxitPhantomPDF.exe
 #!p::
 	IfWinExist python.exe
 		WinActivate
@@ -172,12 +172,17 @@ return
 	return
 #!+p::Run python
 #!n::
+	IfWinExist Notepad++
+		WinActivate
+	else
+		Run D:\Program Files (x86)\Notepad++\notepad++.exe
+	return
+#!+n::
 	IfWinExist ahk_class Notepad
 		WinActivate
 	else
-		Run Notepad
+		Run notepad
 	return
-#!+n::Run Notepad
 
 ;改造win的烂设计
 ~lwin up::return	;屏蔽win键, 但是组合键在win后按的时候是可以识别的.
@@ -210,7 +215,7 @@ sendC(str)
 	clipboard:=str
 	clipwait
 	sleep 200
-	send ^v
+	send {CTRLDOWN}v{CTRLUP}
 	clipboard:=_
 	_:=""
 }
